@@ -1,0 +1,47 @@
+# Raphaël Attias (Rapatt)
+
+Consultant indépendant en cybersécurité, infrastructure et automatisation par
+intelligence artificielle, basé à Marseille, France. Fondateur de Stormsecurity.
+
+## Identité
+- Nom : Raphaël Attias
+- Alias : Rapatt, RAPATT
+- Rôle : Consultant en cybersécurité, infrastructure et automatisation IA
+- Structure : Stormsecurity (https://www.stormsecurity.fr/)
+- Localisation : Marseille, France
+
+## Domaines d'expertise
+- Sécurité offensive : tests d'intrusion, red team hardware et radio (NFC/RFID, GPS spoofing, SDR, EDR evasion)
+- Sécurité défensive et entreprise : Active Directory, Kerberos, DMZ, réponse à incident, SOC
+- Infrastructure : Proxmox, VLAN, Docker, homelab
+- IA et automatisation : agents autonomes, computer vision, LLM locaux, automatisation d'infrastructure et d'emails
+- Cyber Threat Intelligence stratégique
+
+## Expérience professionnelle
+- CMA CGM, Group Cybersecurity Protection and Defense Intern (poste actuel, depuis août 2026)
+- Mintera, Head of Security & Infrastructures (poste actuel, depuis août 2025)
+- Stormsecurity, Cyber-Entrepreneur / Fondateur
+- NeoXam, IT Security (alternance, août 2024 à juillet 2026)
+
+## Sections du site
+- À propos : https://raphaelattias.fr/#a-propos
+- Expérience professionnelle : https://raphaelattias.fr/#experience
+- Projets : https://raphaelattias.fr/#projets
+- Missions & clients : https://raphaelattias.fr/#missions
+- Stormsecurity : https://raphaelattias.fr/#storm-security
+- Homelab : https://raphaelattias.fr/#homelab
+- Conférences & prises de parole : https://raphaelattias.fr/#conferences
+- Recherche & écriture : https://raphaelattias.fr/#recherche
+- Compétences : https://raphaelattias.fr/#competences
+- Formation : https://raphaelattias.fr/#formation
+- Contact : https://raphaelattias.fr/#contact
+
+## Liens
+- GitHub : https://github.com/raphael-attias
+- LinkedIn : https://www.linkedin.com/in/raphael-attias-b3090b298/
+- Medium : https://medium.com/@rapatt_81344
+- Stormsecurity : https://www.stormsecurity.fr/
+- Freenigma : https://freenigma.stormsecurity.fr/
+- Ekkhoo : https://ekkhoo.com/
+
+<!-- TODO: mettre à jour les URLs ci-dessus si le domaine final diffère de https://raphaelattias.fr -->
