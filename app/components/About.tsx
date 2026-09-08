@@ -12,7 +12,7 @@ const FACTS = [
 
 export default function About() {
   return (
-    <section id="a-propos" className="container-content py-24 sm:py-32">
+    <section id="a-propos" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading index="01" label="Profil" title="Deux versants, un seul métier" />
       </Reveal>
@@ -84,9 +84,12 @@ export default function About() {
               (next/image, alt descriptif incluant "Raphaël Attias") si souhaité. */}
           <dl className="panel divide-y divide-night-border font-mono text-[13px]">
             {FACTS.map((f) => (
-              <div key={f.k} className="flex items-baseline justify-between gap-4 px-5 py-4">
+              <div
+                key={f.k}
+                className="flex flex-col gap-1 px-4 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4 sm:px-5"
+              >
                 <dt className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">{f.k}</dt>
-                <dd className="text-right text-ink">{f.v}</dd>
+                <dd className="text-ink sm:text-right">{f.v}</dd>
               </div>
             ))}
           </dl>

@@ -56,9 +56,10 @@ export default function HeroCanvas() {
         }}
       />
       {ready ? <GridScene still={Boolean(reduceMotion) || !visible} /> : null}
-      {/* Sous 1024 px, le texte recouvre toute la scène : on l'assombrit pour
-          préserver le contraste de lecture. */}
-      <div className="pointer-events-none absolute inset-0 bg-night/45 lg:bg-transparent" />
+      {/* Sous 1024 px, le texte recouvre toute la scène : on l'assombrit
+          nettement pour préserver le contraste de lecture (scrim renforcé sur
+          mobile et tablette, transparent sur desktop où le texte est en colonne). */}
+      <div className="pointer-events-none absolute inset-0 bg-night/60 lg:bg-transparent" />
 
       {/* Fondu vers le fond : le bas de la scène se dissout dans la page */}
       <div

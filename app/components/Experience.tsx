@@ -12,7 +12,7 @@ const ICONS = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="container-content py-24 sm:py-32">
+    <section id="experience" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="02"

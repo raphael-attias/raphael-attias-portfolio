@@ -4,7 +4,7 @@ import { homelabSpecs } from '@/lib/data';
 
 export default function Homelab() {
   return (
-    <section id="homelab" className="container-content py-24 sm:py-32">
+    <section id="homelab" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="05"

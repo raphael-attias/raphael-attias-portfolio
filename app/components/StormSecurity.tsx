@@ -4,7 +4,7 @@ import { links, site, stormServices } from '@/lib/data';
 
 export default function StormSecurity() {
   return (
-    <section id="storm-security" className="relative py-24 sm:py-32">
+    <section id="storm-security" className="relative py-16 sm:py-24 lg:py-32">
       {/* Halo d'accent très diffus derrière le bloc */}
       <div
         aria-hidden="true"
@@ -42,7 +42,7 @@ export default function StormSecurity() {
               </div>
             </div>
 
-            <ul className="grid gap-px bg-night-border sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-px bg-night-border sm:grid-cols-2 lg:grid-cols-3">
               {stormServices.map((s, i) => (
                 <Reveal as="li" key={s.title} delay={(i % 3) * 0.06}>
                   <TiltCard strength={3} className="h-full bg-night-card p-6 sm:p-8">

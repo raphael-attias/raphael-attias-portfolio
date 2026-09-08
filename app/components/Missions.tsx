@@ -40,7 +40,7 @@ function ExternalIcon() {
 
 export default function Missions() {
   return (
-    <section id="missions" className="container-content py-24 sm:py-32">
+    <section id="missions" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="04"
@@ -124,7 +124,7 @@ export default function Missions() {
                 ) : null}
 
                 {m.stats ? (
-                  <div className="mt-6 grid gap-6 border-t border-night-border pt-6 sm:grid-cols-3 lg:grid-cols-5">
+                  <div className="mt-6 grid grid-cols-1 gap-6 border-t border-night-border pt-6 sm:grid-cols-3 lg:grid-cols-5">
                     {m.stats.map((stat) => (
                       <div key={stat.label}>
                         <Counter

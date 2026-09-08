@@ -34,7 +34,7 @@ export default function Contact() {
     'w-full rounded-lg border border-night-border bg-night-deep/60 px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus:border-accent/60 focus:outline-none';
 
   return (
-    <section id="contact" className="container-content py-24 sm:py-32">
+    <section id="contact" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="09"
@@ -47,7 +47,7 @@ export default function Contact() {
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
         <Reveal delay={0.05}>
           <form onSubmit={handleSubmit} className="panel space-y-5 p-6 sm:p-9">
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="contact-name"
