@@ -5,7 +5,7 @@ import { talks } from '@/lib/data';
 
 export default function Talks() {
   return (
-    <section id="conferences" className="container-content py-24 sm:py-32">
+    <section id="conferences" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="06"
@@ -15,7 +15,7 @@ export default function Talks() {
         />
       </Reveal>
 
-      <ol className="grid gap-4 lg:grid-cols-2">
+      <ol className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {talks.map((talk, i) => (
           <Reveal as="li" key={talk.event} delay={i * 0.08}>
             <TiltCard strength={3} className="panel h-full p-6 sm:p-9">

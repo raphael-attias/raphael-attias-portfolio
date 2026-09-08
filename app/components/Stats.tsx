@@ -18,8 +18,8 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section aria-label="Chiffres clés" className="container-content py-16 sm:py-20">
-      <ul className="grid gap-px overflow-hidden rounded-xl border border-night-border bg-night-border sm:grid-cols-2 lg:grid-cols-4">
+    <section aria-label="Chiffres clés" className="container-content py-12 sm:py-16 lg:py-20">
+      <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-night-border bg-night-border sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s) => (
           <li key={s.label} className="bg-night-card px-6 py-8">
             <Counter value={s.value} prefix={s.prefix} suffix={s.suffix} />

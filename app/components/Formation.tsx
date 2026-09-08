@@ -8,7 +8,7 @@ import { education } from '@/lib/data';
  */
 export default function Formation() {
   return (
-    <section id="formation" className="container-content py-16 sm:py-20">
+    <section id="formation" className="container-content py-12 sm:py-16 lg:py-20">
       <div className="border-t border-night-border pt-10">
         <p className="label">Formation</p>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink-muted">

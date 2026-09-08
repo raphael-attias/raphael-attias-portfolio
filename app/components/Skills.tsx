@@ -5,12 +5,12 @@ import { skillGroups } from '@/lib/data';
 
 export default function Skills() {
   return (
-    <section id="competences" className="container-content py-24 sm:py-32">
+    <section id="competences" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading index="08" label="Stack" title="Compétences" />
       </Reveal>
 
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {skillGroups.map((group, i) => (
           <Reveal as="li" key={group.domain} delay={(i % 3) * 0.06}>
             <TiltCard strength={4} className="panel h-full p-6">

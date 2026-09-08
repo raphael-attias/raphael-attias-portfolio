@@ -38,7 +38,7 @@ const articlesJsonLd = {
 
 export default function Writing() {
   return (
-    <section id="recherche" className="container-content py-24 sm:py-32">
+    <section id="recherche" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="07"
@@ -57,7 +57,7 @@ export default function Writing() {
         </div>
       </Reveal>
 
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {articles.map((a, i) => (
           <Reveal as="li" key={a.href} delay={(i % 4) * 0.05}>
             <TiltCard className="panel group relative h-full">

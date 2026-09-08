@@ -14,7 +14,7 @@ export default function SectionHeading({
   description,
 }: SectionHeadingProps) {
   return (
-    <header className="mb-12 sm:mb-16">
+    <header className="mb-8 sm:mb-12 lg:mb-16">
       <div className="flex items-center gap-4">
         <span className="label-accent shrink-0">
           <span aria-hidden="true">[ {index} ] </span>

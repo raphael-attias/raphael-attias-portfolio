@@ -18,10 +18,10 @@ export default function Hero() {
   });
 
   return (
-    <section id="top" className="relative isolate min-h-[100svh] overflow-hidden">
+    <section id="top" className="relative isolate min-h-[90svh] overflow-hidden sm:min-h-[100svh]">
       <HeroCanvas />
 
-      <div className="container-content relative z-10 flex min-h-[100svh] flex-col justify-end pb-24 pt-32 sm:pb-28 lg:pb-32">
+      <div className="container-content relative z-10 flex min-h-[90svh] flex-col justify-end pb-10 pt-24 sm:min-h-[100svh] sm:pb-24 sm:pt-32 lg:pb-32">
         <motion.div {...rise(0)} className="flex flex-wrap items-center gap-2">
           <span className="pill">
             <span
@@ -77,10 +77,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Indicateur de défilement */}
+      {/* Indicateur de défilement (masqué sur les plus petits écrans, où le
+          bandeau suivant qui dépasse sert déjà d'indice de défilement). */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex"
+        className="pointer-events-none absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
       >
         <span className="label text-[10px]">Scroll</span>
         <span className="relative block h-10 w-px overflow-hidden bg-night-border">

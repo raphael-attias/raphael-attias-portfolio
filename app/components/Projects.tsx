@@ -46,7 +46,7 @@ const SPAN_CLASS: Record<2 | 3 | 6, string> = {
 
 export default function Projects() {
   return (
-    <section id="projets" className="container-content py-24 sm:py-32">
+    <section id="projets" className="container-content py-16 sm:py-24 lg:py-32">
       <Reveal>
         <SectionHeading
           index="03"
@@ -56,7 +56,7 @@ export default function Projects() {
         />
       </Reveal>
 
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
         {projects.map((p, i) => (
           <Reveal
             as="li"

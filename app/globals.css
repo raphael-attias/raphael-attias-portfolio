@@ -13,6 +13,9 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* Garde-fou : aucun débordement horizontal parasite ne peut créer de
+       scroll latéral, même si un enfant dépasse ponctuellement. */
+    overflow-x: hidden;
   }
 
   body {
@@ -58,7 +61,7 @@
 
 @layer components {
   .container-content {
-    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-12;
   }
 
   /* Titres display : monospace, capitales, très serrés */

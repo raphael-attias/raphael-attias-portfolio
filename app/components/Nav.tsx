@@ -46,15 +46,25 @@ export default function Nav() {
     return () => observer.disconnect();
   }, []);
 
+  // Menu ouvert : on gèle le défilement de la page. Le conteneur de scroll de
+  // ce site est <html> (pas <body>), donc verrouiller body.overflow ne suffit
+  // pas — c'est la cause du « double scroll ». On bloque donc <html> et on
+  // compense la largeur de la scrollbar pour éviter tout décalage horizontal.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false);
     };
-    document.body.style.overflow = 'hidden';
+    const root = document.documentElement;
+    const scrollbarWidth = window.innerWidth - root.clientWidth;
+    const prevOverflow = root.style.overflow;
+    const prevPaddingRight = root.style.paddingRight;
+    root.style.overflow = 'hidden';
+    if (scrollbarWidth > 0) root.style.paddingRight = `${scrollbarWidth}px`;
     window.addEventListener('keydown', onKey);
     return () => {
-      document.body.style.overflow = '';
+      root.style.overflow = prevOverflow;
+      root.style.paddingRight = prevPaddingRight;
       window.removeEventListener('keydown', onKey);
     };
   }, [open]);
@@ -109,7 +119,7 @@ export default function Nav() {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-controls="menu-mobile"
-              className="grid h-10 w-10 place-items-center rounded-full border border-night-border bg-night-raised/70 text-ink transition-colors hover:border-night-hover hover:text-accent"
+              className="grid h-11 w-11 place-items-center rounded-full border border-night-border bg-night-raised/70 text-ink transition-colors hover:border-night-hover hover:text-accent"
             >
               <span className="sr-only">{open ? 'Fermer le menu' : 'Ouvrir le menu'}</span>
               <span aria-hidden="true" className="flex flex-col gap-[5px]">
@@ -129,19 +139,22 @@ export default function Nav() {
         </nav>
       </header>
 
-      {/* Panneau plein écran : reprend la totalité des sections */}
+      {/* Panneau plein écran : reprend la totalité des sections.
+          overflow-y-auto + min-h-full sur la liste : centré quand tout tient,
+          défilable (sans clipper d'entrées) sur les écrans courts ou en paysage.
+          overscroll-contain empêche le scroll de « fuir » vers la page. */}
       <div
         id="menu-mobile"
         hidden={!open}
-        className="fixed inset-0 z-40 bg-night-deep/95 backdrop-blur-xl"
+        className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-night-deep/95 backdrop-blur-xl"
       >
-        <ul className="container-content flex h-full flex-col justify-center gap-1 pt-16">
+        <ul className="container-content flex min-h-full flex-col justify-center gap-1 pb-16 pt-24">
           {navItems.map((item, i) => (
             <li key={item.href} className="border-b border-night-border/60">
               <a
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="flex items-baseline gap-4 py-4 font-display text-xl font-bold uppercase tracking-tight text-white transition-colors hover:text-accent"
+                className="flex items-baseline gap-4 py-4 font-display text-lg font-bold uppercase tracking-tight text-white transition-colors hover:text-accent sm:text-xl"
               >
                 <span className="font-mono text-[11px] tracking-normal text-accent">
                   {String(i + 1).padStart(2, '0')}
