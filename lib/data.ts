@@ -9,7 +9,7 @@ export const site = {
   role: 'Consultant indépendant en cybersécurité, infrastructure et automatisation par IA',
   company: 'Stormsecurity',
   location: 'Marseille, France',
-  email: 'raphaelattias13@gmail.com',
+  email: 'rapatt@littlestorm.eu',
   url: 'https://raphaelattias.fr', // TODO: remplacer par le domaine final si différent
 } as const;
 
